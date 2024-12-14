@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>‧₊˚🖇️ ✮⋆˙ ₊˚🎧⊹⋆｡𖦹 °</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+    }
+
+    /* Static Background */
+    body {
+      background-color: #000; /* Black background */
+      color: #fff; /* White text */
+      font-size: 14px;
+      text-align: center;
+    }
+
+    /* Container */
+    .container {
+      width: 1100px;
+      margin: 30px auto;
+      display: flex;
+      justify-content: space-between;
+      background-color: rgba(30, 30, 30, 0.9); /* Dark Grey */
+      padding: 20px;
+      border-radius: 25px;
+      border: 5px solid transparent;
+      background-image: linear-gradient(45deg, #444, #222); /* Dark grey gradient */
+      background-origin: border-box;
+      background-clip: content-box, border-box;
+      box-shadow: 0 0 20px #222; /* Darker shadow */
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 25%;
+      background-color: #333; /* Dark grey */
+      border-radius: 20px;
+      padding: 15px;
+      border: 5px solid transparent;
+      background-image: linear-gradient(45deg, #444, #222); /* Dark grey gradient */
+      background-origin: border-box;
+      background-clip: content-box, border-box;
+      box-shadow: 0 0 15px #222; /* Darker shadow */
+    }
+
+    .sidebar img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      transition: transform 0.3s ease;
+    }
+
+    .sidebar img:hover {
+      transform: scale(1.1);
+    }
+
+    .navigation, .to-do, .welcome, .button-section {
+      background-color: #222; /* Very dark grey */
+      border: 2px solid #444; /* Lighter grey */
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 15px;
+      color: #bbb; /* Light grey text */
+      transition: transform 0.3s ease, background-color 0.3s;
+    }
+
+    .navigation a, .to-do li, .welcome p {
+      color: #bbb;
+      text-decoration: none;
+      font-size: 16px;
+      display: block;
+      margin-bottom: 8px;
+      transition: color 0.3s ease;
+    }
+
+    .navigation a:hover, .to-do li:hover {
+      color: #fff;
+      transform: scale(1.05);
+    }
+
+    .navigation:hover, .to-do:hover {
+      background-color: #333;
+      transform: scale(1.03);
+    }
+
+    /* Main Content */
+    .main-content {
+      width: 70%;
+      animation: slideIn 1s ease-out;
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateX(100%);
+      }
+      to {
+        transform: translateX(0);
+      }
+    }
+
+    .card {
+      background-color: #222; /* Very dark grey */
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 15px;
+      border: 3px solid transparent;
+      background-image: linear-gradient(45deg, #444, #222); /* Dark grey gradient */
+      background-origin: border-box;
+      background-clip: content-box, border-box;
+      box-shadow: 0 0 15px #222; /* Darker shadow */
+      animation: cardSlideIn 1s ease-out;
+    }
+
+    @keyframes cardSlideIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .card h2 {
+      font-size: 24px;
+      color: #fff; /* White text for headers */
+      text-shadow: 0 0 10px #444; /* Light grey shadow */
+      margin-bottom: 15px;
+      animation: fadeInText 1s ease-out;
+    }
+
+    @keyframes fadeInText {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .card p {
+      font-size: 16px;
+      color: #ccc; /* Light grey text */
+      line-height: 1.6;
+    }
+
+    /* Update Content */
+    .update-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* Updated Image Size */
+    .update-image {
+      width: 150px;
+      height: 150px; 
+      background-color: #333; /* Dark grey */
+      border-radius: 10px;
+      margin-left: 20px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .update-image:hover {
+      transform: rotate(10deg) scale(1.05);
+    }
+
+    /* Additional Image Containers */
+    .extra-images img {
+      width: 90%;
+      height: auto;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .extra-images img:hover {
+      transform: scale(1.1);
+    }
+
+    /* For three square images */
+    .three-squares {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    .three-squares img {
+      width: 32%; /* Makes each image take up roughly one-third of the space */
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .three-squares img:hover {
+      transform: scale(1.05) rotate(5deg);
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 30px;
+      color: #bbb; /* Light grey */
+      font-size: 16px;
+      text-align: center;
+      background-color: #111; /* Almost black */
+      padding: 15px;
+      border-top: 3px solid #444; /* Lighter grey border */
+    }
+
+    footer a {
+      color: #bbb;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: #fff;
+    }
+
+    /* Hover Animation for Specific Text */
+    h2:hover, .navigation a:hover {
+      transform: scale(1.05) rotate(3deg); /* Slight scale and rotation */
+      color: #fff; /* Change color to white */
+      text-shadow: 0 0 10px #bbb; /* Glowing effect */
+    }
+
+    /* Hover Animation for Links and Important Text Only */
+    .navigation a, .card h2 {
+      transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+    }
+
+    .to-do li:hover, .welcome p:hover {
+      transform: none;
+      color: inherit;
+      text-shadow: none;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Main Content -->
+    <div class="main-content">
+      <div class="card">
+        <h2>(ó﹏ò｡) .ᐟ.ᐟ OWH EMMM GEEE WHUTTT</h2>
+        <div class="update-content">
+          <p><strong>14.12.2024</strong>: OH MY GOODNESS!!! thank u for dropping by, this is my cutesy little html site that i coded, enjoy your stay and lets get 2 know each other (˵ •̀ ᗜ •́ ˵ ) ✧</p>
+          <p>dont talk to me if you find everyth embarrassing, obviously I have public decency but i also enjoy a lil fun hauehahe!!! who cares abt strangers who dont truly know u?? who gives a shit whats cool, dont talk to me if you only care abt public opinion, i want raw real relationships, dont lie abt who you are das not cute.. ˚₊‧꒰ა ☆ ໒꒱ ‧₊˚</p>
+
+          <img src="https://i.pinimg.com/736x/83/e8/92/83e89244932b97df8ec7807df0e3cf47.jpg" alt="Update Image" class="update-image">
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>𐙚 ‧₊˚ ⋅ About the one and only ARABELLA !! (˶˃ ᵕ ˂˶) .ᐟ.ᐟ</h2>
+        <p>HAIII!! I'm a student of OBMC Las Pinas in the Philippines, I'm very passionate about my love for poetry and anything art related. I really really really really love raccoons and cutesy typically "scary" rodent type animals, i think theyre like cute lil trash pandas cutesy babys..  I love love love collecting sanrio figures nd plush toys ⋆. 𐙚 ˚ Imo deep talks are the best form of intimacy, i mostly call instead of text but both work fine hehehe!!  Im really loud and kind of a weirdo.. im ALL brainrot so dont talk to me if ur js gonna make fun of me yipeepepe!! typically fond of everyone but i like both girls and guys ᕙ(  •̀ ᗜ •́  )ᕗ </p>
+        
+        <div class="three-squares">
+          <img src="https://i.pinimg.com/736x/50/1b/6c/501b6c4c991584386508da4c3ea6e57b.jpg" alt="Image 1">
+          <img src="https://i.pinimg.com/236x/bf/8c/34/bf8c34ccdd7b64a597025a47d84404b5.jpg" alt="Image 2">
+          <img src="https://i.pinimg.com/236x/62/b9/7d/62b97d50bbafc5c23b486e25a662ae31.jpg" alt="Image 3">
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>૮ • ﻌ - ა Current Statuses ⋆.𐙚˚</h2>
+        <p><strong>Listening:</strong>Rotten Mango - Stephanie Soo<br><strong>Watching:</strong>Dexter & Parasite</p>
+
+        <div class="three-squares">
+          <img src="https://i.pinimg.com/236x/39/f2/54/39f25441dd05d23175c3fe24435b65a5.jpg" alt="Status Image 1">
+          <img src="https://i.pinimg.com/236x/57/09/ee/5709ee0e50566a1d1d0f455249b790a8.jpg" alt="Status Image 2">
+          <img src="https://i.pinimg.com/236x/9e/35/2f/9e352f3747da8ae42859efdb83de3c49.jpg" alt="Status Image 3">
+        </div>
+      </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="navigation">
+        <h3>Navigate ᶻ 𝗓 𐰁 .ᐟ</h3>
+        <a href="index.html">Home</a>
+        <a href="page1.html">Selfies</a>
+      </div>
+      <div class="welcome">
+        <h3>HALLOOOO! (っ- ‸ - ς)</h3>
+        <p>Thank you for stopping by! I dont really expect anyone to check this out honestly..</p>
+      </div>
+      <div class="to-do">
+        <h3>To-Do List !!</h3>
+        <ul>
+          <li>1. make more pages for this thing..</li>
+          <li>2. save more cute raccoon pics!!</li>
+          <li>3. MEET RACCOON !??!?!..</li>
+        </ul>
+      </div>
+      <div class="extra-images">
+        <h3>More Cute Babies!!</h3>
+        <img src="https://i.pinimg.com/236x/13/6f/a2/136fa2fc2efcbb51cd28d2d7842544c1.jpg" alt="Extra Image 1">
+        <img src="https://i.pinimg.com/236x/fa/ff/56/faff56c9dcc0651e383cdbeb60abfaa0.jpg" alt="Extra Image 2">
+        <img src="https://i.pinimg.com/474x/a5/4e/a1/a54ea1d208128d03f0be223a657513bc.jpg" alt="Extra Image 3">
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Arabellas Blog | Created with love ⋆౨
+  </footer>
+</body>
+</html>

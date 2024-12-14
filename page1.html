@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>‧₊˚🖇️ ✮⋆˙ ₊˚🎧⊹⋆｡𖦹 °</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+    }
+
+    /* Static Background */
+    body {
+      background-color: #000; /* Black background */
+      color: #fff; /* White text */
+      font-size: 14px;
+      text-align: center;
+    }
+
+    /* Container */
+    .container {
+      width: 1100px;
+      margin: 30px auto;
+      display: flex;
+      justify-content: space-between;
+      background-color: rgba(30, 30, 30, 0.9); /* Dark Grey */
+      padding: 20px;
+      border-radius: 25px;
+      border: 5px solid transparent;
+      background-image: linear-gradient(45deg, #444, #222); /* Dark grey gradient */
+      background-origin: border-box;
+      background-clip: content-box, border-box;
+      box-shadow: 0 0 20px #222; /* Darker shadow */
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 25%;
+      background-color: #333; /* Dark grey */
+      border-radius: 20px;
+      padding: 15px;
+      border: 5px solid transparent;
+      background-image: linear-gradient(45deg, #444, #222); /* Dark grey gradient */
+      background-origin: border-box;
+      background-clip: content-box, border-box;
+      box-shadow: 0 0 15px #222; /* Darker shadow */
+    }
+
+    .sidebar img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      transition: transform 0.3s ease;
+    }
+
+    .sidebar img:hover {
+      transform: scale(1.1);
+    }
+
+    .navigation, .to-do, .welcome, .button-section {
+      background-color: #222; /* Very dark grey */
+      border: 2px solid #444; /* Lighter grey */
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 15px;
+      color: #bbb; /* Light grey text */
+      transition: transform 0.3s ease, background-color 0.3s;
+    }
+
+    .navigation a, .to-do li, .welcome p {
+      color: #bbb;
+      text-decoration: none;
+      font-size: 16px;
+      display: block;
+      margin-bottom: 8px;
+      transition: color 0.3s ease;
+    }
+
+    .navigation a:hover, .to-do li:hover {
+      color: #fff;
+      transform: scale(1.05);
+    }
+
+    .navigation:hover, .to-do:hover {
+      background-color: #333;
+      transform: scale(1.03);
+    }
+
+    /* Main Content */
+    .main-content {
+      width: 70%;
+      animation: slideIn 1s ease-out;
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateX(100%);
+      }
+      to {
+        transform: translateX(0);
+      }
+    }
+
+    .card {
+      background-color: #222; /* Very dark grey */
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 15px;
+      border: 3px solid transparent;
+      background-image: linear-gradient(45deg, #444, #222); /* Dark grey gradient */
+      background-origin: border-box;
+      background-clip: content-box, border-box;
+      box-shadow: 0 0 15px #222; /* Darker shadow */
+      animation: cardSlideIn 1s ease-out;
+    }
+
+    @keyframes cardSlideIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .card h2 {
+      font-size: 24px;
+      color: #fff; /* White text for headers */
+      text-shadow: 0 0 10px #444; /* Light grey shadow */
+      margin-bottom: 15px;
+      animation: fadeInText 1s ease-out;
+    }
+
+    @keyframes fadeInText {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* Image Gallery */
+    .image-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .image-gallery img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .image-gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Sidebar Image Gallery */
+    .sidebar-gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .sidebar-gallery img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .sidebar-gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 30px;
+      color: #bbb; /* Light grey */
+      font-size: 16px;
+      text-align: center;
+      background-color: #111; /* Almost black */
+      padding: 15px;
+      border-top: 3px solid #444; /* Lighter grey border */
+    }
+
+    footer a {
+      color: #bbb;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: #fff;
+    }
+
+    /* Hover Animation for Headers */
+    h2:hover, .navigation a:hover {
+      transform: scale(1.05) rotate(3deg); /* Slight scale and rotation */
+      color: #fff; /* Change color to white */
+      text-shadow: 0 0 10px #bbb; /* Glowing effect */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Main Content -->
+    <div class="main-content">
+      <div class="card">
+        <h2>My Cutesy little Gallery (´• ᴗ • `)</h2>
+        
+        <div class="image-gallery">
+          <img src="https://media.discordapp.net/attachments/1269026407334412319/1317511440696868915/MEITU_20241209_220216411.jpg?ex=675ef3a5&is=675da225&hm=75fcc760262196d6a0db169a58d67872df76e55948d51dc8640df4c014357322&=&format=webp&width=380&height=661" alt="Image 1">
+          <img src="https://media.discordapp.net/attachments/1269026407334412319/1317511441938649238/Screenshot_20240922_161116_Gallery.jpg?ex=675ef3a5&is=675da225&hm=7079d6a6150459699546d31f3c038e6692cfe9695e5e01909800b52f680b98a3&=&format=webp&width=500&height=662" alt="Image 2">
+          <img src="https://media.discordapp.net/attachments/1269026407334412319/1317511442227925074/IMG_20240717_170737_211.jpg?ex=675ef3a6&is=675da226&hm=118fd9009fa1f25669851a5273f6528891feb6251ff0c96e5e06873903dd5d3e&=&format=webp&width=497&height=662" alt="Image 3">
+          <img src="https://media.discordapp.net/attachments/1269026407334412319/1317511441305305088/SNOW_20241117_231523_357.jpg?ex=675ef3a5&is=675da225&hm=51d28ed57ed76a2a8b28a69b72f7c52527960bc27e1d4cd14ddc5ce072e1f92b&=&format=webp&width=496&height=662" alt="Image 4">
+          <img src="https://media.discordapp.net/attachments/1269026407334412319/1317511856251998238/20240708_020914.jpg?ex=675ef408&is=675da288&hm=1502686897b6ecbad3178b573354abbf61d201d5a97fa1e6afc2f5cb576a2579&=&format=webp&width=372&height=662" alt="Image 5">
+          <img src="https://media.discordapp.net/attachments/1269026407334412319/1317511440999125082/SNOW_20241201_150618_187.jpg?ex=675ef3a5&is=675da225&hm=fc6676a6cd8f9092803f4a93952c761f21c88e8fb388aff998e1beffb4e9c04b&=&format=webp&width=496&height=662" alt="Image 6">
+        </div>
+      </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="navigation">
+        <h3>Navigate ᶻ 𝗓 𐰁 .ᐟ</h3>
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+      </div>
+      <div class="welcome">
+        <h3>Welcome to the Gallery!</h3>
+        <p>Enjoy the collection of my face plastered on your screen for a good couple of seconds (joke) hehe!!! ૮ ˙Ⱉ˙ ა</p>
+      </div>
+
+      <div class="sidebar-gallery">
+        <img src="https://i.pinimg.com/236x/53/b3/b9/53b3b95b5eedda1d96c8bb902ea2d29a.jpg" alt="Sidebar Image 1">
+        <img src="https://i.pinimg.com/236x/c5/1b/32/c51b32cfc983ca8e5fd9d487ddf5d001.jpg" alt="Sidebar Image 2">
+        <img src="https://i.pinimg.com/236x/09/d8/6f/09d86feaa81286172e1550e4ac9042d6.jpg" alt="Sidebar Image 3">
+        <img src="https://i.pinimg.com/236x/1b/78/ee/1b78ee05428534a524f54e055dda4844.jpg" alt="Sidebar Image 4">
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Image Gallery | Created with love ⋆ 𐙚</p>
+  </footer>
+</body>
+</html>
